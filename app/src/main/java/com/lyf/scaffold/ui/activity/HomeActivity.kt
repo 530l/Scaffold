@@ -9,6 +9,7 @@ class HomeActivity : BaseActivity() {
     }
 
     override fun initView() {
+
     }
 
     override fun initData() {

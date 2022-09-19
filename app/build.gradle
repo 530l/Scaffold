@@ -85,5 +85,6 @@ dependencies {
     implementation 'com.github.DylanCaiCoding:MMKV-KTX:1.2.14'
     //livedata防止倒灌  https://github.com/KunMinX/UnPeek-LiveData
     implementation 'com.kunminx.arch:unpeek-livedata:7.7.0'
-
+    //https://github.com/JeremyLiao/LiveEventBus
+    implementation 'io.github.jeremyliao:live-event-bus-x:1.8.0'
 }
