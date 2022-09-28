@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "222793140380",
+    "project_id": "testfirbase-48e4e",
+    "storage_bucket": "testfirbase-48e4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222793140380:android:eb569322c3f133b1fa8559",
+        "android_client_info": {
+          "package_name": "com.lyf.scaffold"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222793140380-d1oh49kgilta0sruetrujh0c6tt4fr8k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lyf.scaffold",
+            "certificate_hash": "ab4198c6ec618df87b66411ed11770f4652eaf06"
+          }
+        },
+        {
+          "client_id": "222793140380-7f3a92rhjksf21nga1s3fqikkiv4arr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV-5PmGJeVLvSzSt5f8D5Ce7Db2O6Q8qQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222793140380-7f3a92rhjksf21nga1s3fqikkiv4arr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
