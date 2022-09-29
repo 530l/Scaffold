@@ -3,7 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
-
+    id 'kotlin-kapt'
+    id 'therouter'
 }
 
 android {
@@ -62,8 +63,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     //协程
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.2'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
     //网络请 https://github.com/liangjingkanji/Net
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
     implementation 'com.github.liangjingkanji:Net:3.5.0'
@@ -109,6 +110,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
-
+    //router
+    implementation "cn.therouter:router:1.1.0"
+    kapt "cn.therouter:apt:1.1.0"
 
 }
