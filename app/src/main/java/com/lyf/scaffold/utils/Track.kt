@@ -50,6 +50,8 @@ object Track {
         firebaseAnalytics.logEvent(event, bundle)
     }
 
+
+
     // 设置用户 id
     fun setUserId(userId: String) {
         firebaseAnalytics.setUserId(userId)
@@ -71,6 +73,7 @@ object Track {
     object Event {
         const val LOGIN_CLICK = "login_click" // 登陆页点击登录
         const val Game_CLICK = "Game_CLICK" // 点击游戏
+        const val Test_CLICK = "Test_CLICK" //
 
     }
 

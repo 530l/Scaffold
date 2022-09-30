@@ -1,18 +1,14 @@
-//pluginManagement {
-//    repositories {
-//        gradlePluginPortal()
-//        google()
-//        mavenCentral()
-//        maven { url 'https://jitpack.io' }
-//    }
-//}
-//dependencyResolutionManagement {
-//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-//    repositories {
-//        google()
-//        mavenCentral()
-//        maven { url 'https://jitpack.io' }
-//    }
-//}
 rootProject.name = "Scaffold"
 include ':app'
+include ':model1'
+include ':model2'
+include ':base'
+include ':common'
+include ':model3'
+include ':model4'
+include ':model5'
+include ':model6'
+include ':model7'
+include ':model8'
+include ':model9'
+include ':model_dto'

@@ -25,3 +25,26 @@
 
 -dontwarn com.lxj.xpopup.widget.**
 -keep class com.lxj.xpopup.widget.**{*;}
+
+-keep class androidx.annotation.Keep
+-keep @androidx.annotation.Keep class * {*;}
+-keepclassmembers class * {
+    @androidx.annotation.Keep *;
+}
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <methods>;
+}
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <fields>;
+}
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <init>(...);
+}
+-keepclasseswithmembers class * {
+    @com.therouter.router.Autowired <fields>;
+}
+
+-keepclassmembers class * implements androidx.viewbinding.ViewBinding {
+     public static ** bind(***);
+     public static ** inflate(...);
+}

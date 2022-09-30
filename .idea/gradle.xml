@@ -12,6 +12,18 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/model1" />
+            <option value="$PROJECT_DIR$/model2" />
+            <option value="$PROJECT_DIR$/model3" />
+            <option value="$PROJECT_DIR$/model4" />
+            <option value="$PROJECT_DIR$/model5" />
+            <option value="$PROJECT_DIR$/model6" />
+            <option value="$PROJECT_DIR$/model7" />
+            <option value="$PROJECT_DIR$/model8" />
+            <option value="$PROJECT_DIR$/model9" />
+            <option value="$PROJECT_DIR$/model_dto" />
           </set>
         </option>
       </GradleProjectSettings>

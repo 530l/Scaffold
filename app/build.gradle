@@ -4,8 +4,8 @@ plugins {
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
     id 'kotlin-kapt'
-    id 'therouter'
 }
+apply plugin: 'therouter'
 
 android {
     compileSdk 32
@@ -62,56 +62,23 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    //协程
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-    //网络请 https://github.com/liangjingkanji/Net
-    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
-    implementation 'com.github.liangjingkanji:Net:3.5.0'
-    //rv适配器 https://github.com/liangjingkanji/BRV
-    implementation 'com.github.liangjingkanji:BRV:1.3.80'
-    // 权限请求框架：https://github.com/getActivity/XXPermissions
-    implementation 'com.github.getActivity:XXPermissions:16.0'
-    // 吐司框架：https://github.com/getActivity/ToastUtils
-    implementation 'com.github.getActivity:ToastUtils:10.5'
-    // Gson 解析容错：https://github.com/getActivity/GsonFactory
-    //需要注意的是：Gson 框架必须使用 2.9.0 及以上版本，否则将会出现版本兼容问题
-    implementation 'com.github.getActivity:GsonFactory:6.3'
-    // Json 解析框架：https://github.com/google/gson
-    implementation 'com.google.code.gson:gson:2.9.1'
-    // Shape 框架：https://github.com/getActivity/ShapeView
-    implementation 'com.github.getActivity:ShapeView:8.3'
-    // 标题栏框架：https://github.com/getActivity/TitleBar
-    implementation 'com.github.getActivity:TitleBar:9.5'
-    //TabLayout https://github.com/angcyo/DslTabLayout
-    implementation 'com.github.angcyo.DslTablayout:TabLayout:3.2.4'
-    implementation 'com.github.angcyo.DslTablayout:ViewPager1Delegate:3.2.4'
-    implementation 'com.github.angcyo.DslTablayout:ViewPager2Delegate:3.2.4'
-    // 状态栏适配 https://github.com/gyf-dev/ImmersionBar
-    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
-    implementation 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
-    //popup https://github.com/li-xiaojun/XPopup
-    implementation 'com.github.li-xiaojun:XPopup:2.8.17'
-    //图片加载 图片选择库 https://github.com/LuckSiege/PictureSelector
-    implementation 'io.github.lucksiege:pictureselector:v3.10.6'
-    implementation 'io.github.lucksiege:compress:v3.10.6'
-    implementation 'com.github.bumptech.glide:glide:4.13.2'
-    //binding https://github.com/hi-dhl/Binding
-    implementation 'com.hi-dhl:binding:1.1.8'
-    //MMKV  https://github.com/DylanCaiCoding/MMKV-KTX
-    implementation 'com.github.DylanCaiCoding:MMKV-KTX:1.2.14'
-    //livedata防止倒灌  https://github.com/KunMinX/UnPeek-LiveData
-    implementation 'com.kunminx.arch:unpeek-livedata:7.7.0'
-    //https://github.com/JeremyLiao/LiveEventBus
-    implementation 'io.github.jeremyliao:live-event-bus-x:1.8.0'
+
+    implementation project(path: ':common')
+    implementation project(path: ':model1')
+    implementation project(path: ':model2')
+    implementation project(path: ':model3') 
+    implementation project(path: ':model4')
+    implementation project(path: ':model5')
+    implementation project(path: ':model6')
+    implementation project(path: ':model7')
+    implementation project(path: ':model8')
+    implementation project(path: ':model9')
+    implementation project(path: ':model_dto')
+    //router
+    kapt "cn.therouter:apt:1.1.0"
 
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:30.4.1')
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
-
-    //router
-    implementation "cn.therouter:router:1.1.0"
-    kapt "cn.therouter:apt:1.1.0"
-
 }
