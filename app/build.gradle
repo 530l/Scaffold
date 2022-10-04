@@ -19,24 +19,24 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    signingConfigs {
-        Signing {
-            keyAlias 'key0'
-            keyPassword '123456'
-            storeFile file('./key/scffold.jks')
-            storePassword '123456'
-        }
-    }
+//    signingConfigs {
+//        Signing {
+//            keyAlias 'key0'
+//            keyPassword '123456'
+//            storeFile file('./key/scffold.jks')
+//            storePassword '123456'
+//        }
+//    }
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.Signing
+//            signingConfig signingConfigs.Signing
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.Signing
+//            signingConfig signingConfigs.Signing
         }
     }
     compileOptions {

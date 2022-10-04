@@ -38,9 +38,6 @@ class WelcomeActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.loginButton)
         loginButton.text = "login"
         loginButton.setOnClickListener {
-            Track.logEvent(Track.Event.LOGIN_CLICK)//登录事件采集
-            Track.setUserProperty("name", "Dany") // 登录成功
-            Track.setUserId("uid123456")
         }
 
 
@@ -49,9 +46,10 @@ class WelcomeActivity : AppCompatActivity() {
         cusButton.text = "cus"
         cusButton.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString("qest_1", "谷歌版本|蓝牙连接成功|王者荣耀|4.3.1|用户:3242334")
-            Log.i("aaaa", "谷歌版本|蓝牙连接成功|王者荣耀|4.3.1|用户:3242334".length.toString())
-            Track.logEvent("qest_1", bundle)//点击游戏
+            bundle.putString("author", "谷歌版本|蓝牙连接成功|王者荣耀|4.3.1|用户:3242334_connect_info_林英发")
+            bundle.putString("title", "谷歌版本|蓝牙连接成功|王者荣耀|4.3.1|用户:3242334_connect_info_程序员")
+            bundle.putString("number_of_pages", "谷歌版本|蓝牙连接成功|王者荣耀|4.3.1|用户:3242334_connect_info_1人")
+            Track.logEvent("author_enevt", bundle)//点击游戏
             //要在 Android 设备上启用 Analytics 调试模式，请执行以下命令：
             //adb shell setprop debug.firebase.analytics.app com.lyf.scaffold
             //调试模式将保持启用状态，直至您通过执行以下命令明确将其停用：
