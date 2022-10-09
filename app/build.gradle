@@ -1,11 +1,15 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'com.google.gms.google-services'
-    id 'com.google.firebase.crashlytics'
-    id 'kotlin-kapt'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'therouter'
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
+}
+
 
 android {
     compileSdk 32
@@ -76,6 +80,7 @@ dependencies {
     implementation project(path: ':model_dto')
     //router
     kapt "cn.therouter:apt:1.1.0"
+    kapt("com.google.dagger:hilt-android-compiler:2.38.1")
 
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:30.4.1')

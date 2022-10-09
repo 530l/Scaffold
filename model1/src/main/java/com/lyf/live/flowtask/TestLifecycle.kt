@@ -38,8 +38,11 @@ object TestLifecycle {
     @FlowTask(taskName = "app1")
     fun test2(context: Context?) {
         Log.i("TestLifecycle", "main线程=========应用启动就会执行")
-        ToastUtils.init(context as Application?)
+
     }
+
+
+
 
     @JvmStatic
     @FlowTask(taskName = "test", dependsOn = "mmkv,app1")
