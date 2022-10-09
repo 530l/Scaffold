@@ -6,14 +6,18 @@ import android.util.Log
 import com.angcyo.tablayout.TabGradientCallback
 import com.dylanc.viewbinding.binding
 import com.lyf.common.CommBaseActivity
+import com.lyf.export_data.di.Record
 import com.lyf.export_data.model1.Model1RoutePath
 import com.lyf.live.databinding.Model1ActivityModel1Binding
 import com.lyf.live.flowtask.TestLifecycle
 import com.therouter.TheRouter
 import com.therouter.router.Autowired
 import com.therouter.router.Route
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @Route(path = Model1RoutePath.Model1ActivityPATH)
+@AndroidEntryPoint
 class Model1Activity : CommBaseActivity() {
 
     private val binding: Model1ActivityModel1Binding by binding()
@@ -30,6 +34,12 @@ class Model1Activity : CommBaseActivity() {
     @JvmField
     var key3: Boolean = false
 
+    //todo hilt，。好东西，可以看看，不过引入的时候需要注意，
+    // 每一个模块都需要声明插件，引入，注解处理器等等。不能省略
+    // 通过注入的对象，就不用自己管理声明周期了，可以交给框架了
+    @Inject
+    @JvmField
+    var record: Record? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +59,7 @@ class Model1Activity : CommBaseActivity() {
             btn3.setOnClickListener {
                 TheRouter.build(TestLifecycle.ACTION2).action()
             }
-            
+
             dslTabLayout1.setCurrentItem(2)
             dslTabLayout1.configTabLayoutConfig {
                 /**是否开启文本颜色*/
@@ -80,5 +90,8 @@ class Model1Activity : CommBaseActivity() {
                 }
             }
         }
+
+        Log.i("hiltDi", record?.age.toString())
+
     }
 }

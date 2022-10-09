@@ -21,10 +21,11 @@ import com.therouter.router.RouteItem
 import com.therouter.router.interceptor.InterceptorCallback
 import com.therouter.router.interceptor.RouterInterceptor
 import com.therouter.router.setRouterInterceptor
+import dagger.hilt.android.HiltAndroidApp
 import okhttp3.Cache
 import java.util.concurrent.TimeUnit
 
-
+@HiltAndroidApp
 class App : Application() {
     override fun onCreate() {
         super.onCreate()

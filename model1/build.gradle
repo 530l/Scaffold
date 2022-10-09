@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
 }
 
@@ -45,5 +46,9 @@ dependencies {
     implementation project(path: ':common')
     kapt "cn.therouter:apt:1.1.0"
     implementation project(path: ':model_dto')
+    kapt "com.google.dagger:hilt-android-compiler:2.43.2"
+    implementation "com.google.dagger:hilt-android:2.43.2"
+    kapt "androidx.room:room-compiler:2.4.3"
+
 
 }
