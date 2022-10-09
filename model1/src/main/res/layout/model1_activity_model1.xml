@@ -35,4 +35,90 @@
 
     </GridLayout>
 
+    <com.angcyo.tablayout.DslTabLayout
+        android:id="@+id/dslTabLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        app:tab_indicator_drawable="@color/white"
+        app:tab_indicator_width="10dp"
+        app:tab_item_auto_equ_width="true"
+        app:tab_orientation="HORIZONTAL">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="热门" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="大卖" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="推荐" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="新闻" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="政治" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="玩家1" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="玩家2" />
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="玩家3" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="玩家3" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="玩家3" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="玩家3" />
+    </com.angcyo.tablayout.DslTabLayout>
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        app:title="我的"
+        app:titleColor="@color/white" />
+
+
 </LinearLayout>

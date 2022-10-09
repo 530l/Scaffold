@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
+import com.lyf.scaffold.utils.DevUtils
 import com.lyf.scaffold.utils.Track
 import com.therouter.TheRouter
 
@@ -51,7 +52,7 @@ class WelcomeActivity : AppCompatActivity() {
             bundle.putString("number_of_pages", "谷歌版本|蓝牙连接成功|王者荣耀|4.3.1|用户:3242334_connect_info_1人")
             Track.logEvent("author_enevt", bundle)//点击游戏
             //要在 Android 设备上启用 Analytics 调试模式，请执行以下命令：
-            //adb shell setprop debug.firebase.analytics.app com.lyf.scaffold
+            // adb shell setprop debug.firebase.analytics.app com.lyf.scaffold
             //调试模式将保持启用状态，直至您通过执行以下命令明确将其停用：
             // adb shell setprop debug.firebase.analytics.app .none.
         }
@@ -72,5 +73,18 @@ class WelcomeActivity : AppCompatActivity() {
 
         // 如果要打开的是fragment，需要使用
 //        .createFragment();
+        val brand = DevUtils.getBrand()//获取厂商
+        val deviceName = DevUtils.getDeviceName()//设备名称
+        val manufacturer = DevUtils.getManufacturer()//获取设备制造商
+        val modelName = DevUtils.getModelName()//设备型号
+
+        Log.i(
+            "devutils", """
+            ${brand}
+            ${deviceName}
+            ${manufacturer}
+            ${modelName}
+        """.trimIndent()
+        )
     }
 }

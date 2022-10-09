@@ -14,4 +14,9 @@ object Model1Route {
             .withBoolean("key3", false)
             .navigation(context)
     }
+
+    fun navigationModel1RvActivity(context: Context) {
+        TheRouter.build(Model1RoutePath.Model1RvActivityPATH)
+            .navigation(context)
+    }
 }

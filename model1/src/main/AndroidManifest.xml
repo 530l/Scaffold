@@ -4,5 +4,6 @@
 
     <application>
         <activity android:name=".Model1Activity" />
+        <activity android:name=".Model1RvActivity"/>
     </application>
 </manifest>
