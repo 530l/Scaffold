@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Scaffold</string>
+
+
+    <string-array name="jifeng_array_info">
+        <item name="huawei_mobile">华为荣耀5C</item>
+        <item name="xiaomi_shouhuan">小米运动手环</item>
+        <item name="qq_sport">QQ运动5积分</item>
+        <item name="gopro_camera">gopro相机</item>
+        <item name="center_info">我要抽奖</item> <!-- don't modified the text length, draw text need four text length -->
+        <item name="misfit_flash">misfit手环</item>
+        <item name="qq_sport">QQ运动8积分</item>
+        <item name="qq_gongzai">QQ公仔</item>
+        <item name="thank_take_part_in">华为荣耀5CC</item> <!-- don't modified the text length, draw text need four text length -->
+    </string-array>
+
+    <string name="choujiang">抽奖</string>
+    <string name="choujiang_desc">"抽奖需消耗10积分，确定抽奖吗?"</string>
+    <string name="result_title">恭喜您</string>
+    <string name="result_message">恭喜您获得%s~</string>
 </resources>

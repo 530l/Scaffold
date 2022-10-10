@@ -35,7 +35,11 @@ class WelcomeActivity2 : BaseActivity() {
         binding.btn2.setOnClickListener {
             Model1Route.navigationModel1RvActivity(this)
         }
-        binding.btn3.setOnClickListener { }
+        binding.btn3.setOnClickListener {
+
+
+
+        }
         binding.btn4.setOnClickListener { }
         binding.btn5.setOnClickListener { }
         binding.btn6.setOnClickListener { }
