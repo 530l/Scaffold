@@ -14,6 +14,7 @@ import com.drake.net.okhttp.setDebug
 import com.drake.net.okhttp.setRequestInterceptor
 import com.drake.statelayout.StateConfig
 import com.hjq.toast.ToastUtils
+import com.lyf.common.db.WordDB
 import com.lyf.live.converter.GsonConverter
 import com.lyf.scaffold.adn.TTAdManagerHolder
 import com.scwang.smart.refresh.footer.ClassicsFooter
@@ -36,6 +37,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         Log.i("TestLifecycle", "App main线程=========应用启动就会执行")
+        WordDB.getInstance(this)
 
         TTAdManagerHolder.get().doInit(this)
 

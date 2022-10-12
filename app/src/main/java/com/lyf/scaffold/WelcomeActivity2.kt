@@ -4,8 +4,12 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import com.drake.net.utils.scopeLife
 import com.dylanc.viewbinding.binding
 import com.lyf.base.BaseActivity
+import com.lyf.common.db.WordDB
+import com.lyf.common.db.WordDao
+import com.lyf.common.db.WordEntity
 import com.lyf.export_data.di.Record
 import com.lyf.export_data.model1.Model1Route
 import com.lyf.scaffold.adn.AdnBannerActivity
@@ -20,6 +24,7 @@ class WelcomeActivity2 : BaseActivity() {
 
     private val binding: ActivityWelcome2Binding by binding()
 
+    private lateinit var wordDao: WordDao
 
     @Inject
     @JvmField
@@ -49,6 +54,13 @@ class WelcomeActivity2 : BaseActivity() {
             val intent = Intent(this, AdnBannerActivity::class.java)
             startActivity(intent)
         }
+        binding.btn3.setOnClickListener {
+
+
+
+        }
+        binding.btn4.setOnClickListener { }
+        binding.btn5.setOnClickListener { }
         binding.btn6.setOnClickListener { }
         binding.btn7.setOnClickListener { }
         binding.btn8.setOnClickListener { }
@@ -56,5 +68,11 @@ class WelcomeActivity2 : BaseActivity() {
 
         Log.i("hiltDi", record?.age.toString())
         record?.age = 1
+
+        wordDao = WordDB.getInstance(this)?.getWordDao() ?: return
+        scopeLife {
+            wordDao.insert(WordEntity("it"))
+
+        }
     }
 }

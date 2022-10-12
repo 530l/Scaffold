@@ -66,11 +66,8 @@ dependencies {
     api 'com.github.li-xiaojun:XPopup:2.8.17'
     api 'io.github.lucksiege:pictureselector:v3.10.6'
     api 'io.github.lucksiege:compress:v3.10.6'
-
-
     api "androidx.room:room-ktx:2.4.3"
     kapt "androidx.room:room-compiler:2.4.3"
-    //Room不能在主线程即UI线程上操作，可以使用lifecycleScope在协程作用域中操作
     api "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
     api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     api "androidx.activity:activity-ktx:1.5.0"
