@@ -2,6 +2,8 @@ package com.lyf.scaffold
 
 import android.app.Application
 import android.util.Log
+import com.bytedance.sdk.openadsdk.TTAdConfig
+import com.bytedance.sdk.openadsdk.TTAdSdk
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.drake.net.NetConfig
@@ -9,11 +11,11 @@ import com.drake.net.cookie.PersistentCookieJar
 import com.drake.net.interceptor.LogRecordInterceptor
 import com.drake.net.okhttp.setConverter
 import com.drake.net.okhttp.setDebug
-import com.drake.net.okhttp.setDialogFactory
 import com.drake.net.okhttp.setRequestInterceptor
 import com.drake.statelayout.StateConfig
 import com.hjq.toast.ToastUtils
 import com.lyf.live.converter.GsonConverter
+import com.lyf.scaffold.adn.TTAdManagerHolder
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.MaterialHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
@@ -27,9 +29,15 @@ import java.util.concurrent.TimeUnit
 
 @HiltAndroidApp
 class App : Application() {
+
+    var PROCESS_NAME_XXXX = "process_name_xxxx"
+
+
     override fun onCreate() {
         super.onCreate()
         Log.i("TestLifecycle", "App main线程=========应用启动就会执行")
+
+        TTAdManagerHolder.get().doInit(this)
 
         ToastUtils.init(this)
         NetConfig.initialize("https://www.wanandroid.com", this) {
