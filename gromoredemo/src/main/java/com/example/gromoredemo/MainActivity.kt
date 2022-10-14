@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //todo gromore sdk 需要2-3s左右初始化完成。。。。
         Thread.sleep(3000)
-        val intent = Intent(this, SplashActivity::class.java)
+        val intent = Intent(this, AdnRewardVideoActivity::class.java)
         startActivity(intent)
     }
 }

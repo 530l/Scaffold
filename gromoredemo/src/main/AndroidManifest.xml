@@ -59,6 +59,9 @@
         </activity>
 
         <activity android:name=".SplashActivity"/>
+        <activity
+            android:name=".AdnRewardVideoActivity"
+            android:configChanges="orientation|screenSize" />
         <!--todo Pangle start================== -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.TTFileProvider"

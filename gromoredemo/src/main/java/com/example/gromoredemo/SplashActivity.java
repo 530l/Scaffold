@@ -25,6 +25,7 @@ public class SplashActivity extends BaseActivity {
 
     private FrameLayout mSplashContainer;
     private String mAdUnitId = "102155800";
+//    private String mAdUnitId = "102157021";
     private AdSplashManager mAdSplashManager;
     private boolean mForceLoadBottom;
     private GMSplashAdListener mSplashAdListener;

@@ -69,9 +69,9 @@ public class LotteryView extends View {
     private float mBigInfoTextSize;
 
     private boolean mNeedRandomTimes = false;
-    private int mInvalidateCircleCount;//使圈数无效
-    private int mInvalidateInnerCardCount;//使内卡计数无效
-    private int mLotteryInvalidateTimes;//彩票抽奖实践
+    private int mInvalidateCircleCount;//
+    private int mInvalidateInnerCardCount;//
+    private int mLotteryInvalidateTimes;//抽奖动画刷新次数
     private boolean mStartAnimation = false; // not real animation
     private boolean mLastEndSelected = false;
 
@@ -95,16 +95,23 @@ public class LotteryView extends View {
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics dm = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(dm);
+        //屏幕宽度
         mScreenWidth = dm.widthPixels;
+        //屏幕高度
         mScreenHeight = dm.heightPixels;
+        //自身最大的宽度
         mSelfTotalWidth = mScreenWidth < mScreenHeight ?
                 (int) (mScreenWidth * DEFAULT_SIZE_FACTOR) : (int) (mScreenHeight * DEFAULT_SIZE_FACTOR);
 
         mSmallInfoTextSize = context.getResources().getDimension(R.dimen.lotteryview_inner_card_text_size);
         mBigInfoTextSize = context.getResources().getDimension(R.dimen.lotteryview_inner_card_big_text_size);
+
         mOuterCircleWidth = (int) context.getResources().getDimension(R.dimen.lotteryview_outer_circle_width);
+
         mInnerCardSpace = (int) context.getResources().getDimension(R.dimen.lotteryview_inner_card_blank);
-        mInnerCardWidth = (mSelfTotalWidth - getPaddingLeft() - getPaddingRight() - mOuterCircleWidth * 2 - mInnerCardSpace * 4) / 3;
+        mInnerCardWidth = (mSelfTotalWidth - getPaddingLeft() - getPaddingRight() - mOuterCircleWidth * 2
+                - mInnerCardSpace * 4) / 3;
+
         mSmallCircleRadius = (int) context.getResources().getDimension(R.dimen.lotteryview_outer_small_circle_radius);
 
         mInnerCardTextColor = context.getResources().getColor(R.color.inner_card_text_color);
@@ -136,10 +143,15 @@ public class LotteryView extends View {
 
     private void acquireCustomAttValues(Context context, AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.LotteryView);
+        //小圆圈默认颜色
         mSmallCircleBlueColor = ta.getColor(R.styleable.LotteryView_outer_small_circle_color_default, 0);
+        //小圆圈变化的颜色
         mSmallCircleYellowColor = ta.getColor(R.styleable.LotteryView_outer_small_circle_color_active, 0);
+        //抽奖动画刷新次数
         mLotteryInvalidateTimes = ta.getInt(R.styleable.LotteryView_lottery_invalidate_times, 0);
+        //view宽度占屏幕宽度的比例 建议设置此值不小于0.75f
         DEFAULT_SIZE_FACTOR = ta.getFloat(R.styleable.LotteryView_self_width_size_factor, DEFAULT_SIZE_FACTOR);
+        //内部卡片默认背景颜色
         mInnerCardDefaultColor = ta.getColor(R.styleable.LotteryView_inner_round_card_color_default, Color.parseColor("#ffffff"));
         ta.recycle();
     }
@@ -164,12 +176,12 @@ public class LotteryView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         //super.onDraw(canvas);
-//        drawOuterRoundCircle(canvas);
+        drawOuterRoundCircle(canvas);
 //        drawOuterDecorateSmallCircle(canvas);
-        drawInnerBackground(canvas);
-        drawInnerCards(canvas);
+//        drawInnerBackground(canvas);
+//        drawInnerCards(canvas);
 //        loopSmallCircleAnimation();
-        loopInnerRoundCardAnimation();
+//        loopInnerRoundCardAnimation();
     }
 
     /**

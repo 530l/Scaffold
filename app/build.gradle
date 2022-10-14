@@ -66,6 +66,12 @@ android {
         dataBinding = true
         viewBinding = true
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -103,5 +109,12 @@ dependencies {
 
     implementation 'com.pangle.cn:ads-sdk-pro:4.8.0.8'
 
+
+    //mediation_ad_sdk adapter
+    implementation(name: "pangle_adapter_4.8.0.8.0", ext: 'aar')
+    //mediation_ad_sdk
+    implementation(name: "mediation_ad_sdk_3.7.0.1", ext: 'aar')
+    //测试工具
+    implementation(name: "mediation_test_tools_3.7.0.1", ext: 'aar')
 
 }

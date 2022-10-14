@@ -54,54 +54,54 @@ public class GMAdManagerHolder {
          * 1、请每次都传入新的info对象
          * 2、字符串类型的值只能是大小写字母，数字，下划线，连字符，字符个数100以内 ( [A-Za-z0-9-_]{1,100} ) ，不符合规则的信息将被过滤掉，不起作用。
          */
-        GMConfigUserInfoForSegment userInfo = new GMConfigUserInfoForSegment();
-        userInfo.setUserId("msdk-demo");
-        userInfo.setGender(UserInfoForSegment.GENDER_MALE);
-        userInfo.setChannel("msdk-channel");
-        userInfo.setSubChannel("msdk-sub-channel");
-        userInfo.setAge(999);
-        userInfo.setUserValueGroup("msdk-demo-user-value-group");
-
-        Map<String, String> customInfos = new HashMap<>();
-        customInfos.put("aaaa", "test111");
-        customInfos.put("bbbb", "test222");
-        userInfo.setCustomInfos(customInfos);
-        JSONObject jsonObject = null;
-        //读取json文件，本地缓存的配置
-        try {
-            jsonObject = new JSONObject(getJson("androidlocalconfig.json", context));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        Map<String, Object> initConfig = new HashMap<>();
-        initConfig.put("1111", "22222");
-        initConfig.put("22222", "33333");
-        initConfig.put("44444", "5555");
+//        GMConfigUserInfoForSegment userInfo = new GMConfigUserInfoForSegment();
+//        userInfo.setUserId("msdk-demo");
+//        userInfo.setGender(UserInfoForSegment.GENDER_MALE);
+//        userInfo.setChannel("msdk-channel");
+//        userInfo.setSubChannel("msdk-sub-channel");
+//        userInfo.setAge(999);
+//        userInfo.setUserValueGroup("msdk-demo-user-value-group");
+//
+//        Map<String, String> customInfos = new HashMap<>();
+//        customInfos.put("aaaa", "test111");
+//        customInfos.put("bbbb", "test222");
+//        userInfo.setCustomInfos(customInfos);
+//        JSONObject jsonObject = null;
+//        //读取json文件，本地缓存的配置
+//        try {
+//            jsonObject = new JSONObject(getJson("androidlocalconfig.json", context));
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//
+//        Map<String, Object> initConfig = new HashMap<>();
+//        initConfig.put("1111", "22222");
+//        initConfig.put("22222", "33333");
+//        initConfig.put("44444", "5555");
 
         return new GMAdConfig.Builder()
                 .setAppId("5340931")
                 .setAppName("蛋蛋模拟器")
                 .setDebug(true)
-                .setPublisherDid(getAndroidId(context))
-                .setOpenAdnTest(false)
-                .setConfigUserInfoForSegment(userInfo)
-                .setPangleOption(new GMPangleOption.Builder()
-                        .setIsPaid(false)
-                        .setTitleBarTheme(GMAdConstant.TITLE_BAR_THEME_DARK)
-                        .setAllowShowNotify(true)
-                        .setAllowShowPageWhenScreenLock(true)
-                        .setDirectDownloadNetworkType(GMAdConstant.NETWORK_STATE_WIFI, GMAdConstant.NETWORK_STATE_3G)
-                        .setIsUseTextureView(true)
-                        .setNeedClearTaskReset()
-                        .setKeywords("")
-                        .build())
-                .setGdtOption(new GMGdtOption.Builder()
-                        .setWxInstalled(false)
-                        .setOpensdkVer(null)
-                        .setSupportH265(false)
-                        .setSupportSplashZoomout(false)
-                        .build())
+//                .setPublisherDid(getAndroidId(context))
+//                .setOpenAdnTest(false)
+////                .setConfigUserInfoForSegment(userInfo)
+//                .setPangleOption(new GMPangleOption.Builder()
+//                        .setIsPaid(false)
+//                        .setTitleBarTheme(GMAdConstant.TITLE_BAR_THEME_DARK)
+//                        .setAllowShowNotify(true)
+//                        .setAllowShowPageWhenScreenLock(true)
+//                        .setDirectDownloadNetworkType(GMAdConstant.NETWORK_STATE_WIFI, GMAdConstant.NETWORK_STATE_3G)
+//                        .setIsUseTextureView(true)
+//                        .setNeedClearTaskReset()
+//                        .setKeywords("")
+//                        .build())
+//                .setGdtOption(new GMGdtOption.Builder()
+//                        .setWxInstalled(false)
+//                        .setOpensdkVer(null)
+//                        .setSupportH265(false)
+//                        .setSupportSplashZoomout(false)
+//                        .build())
                 /**
                  * 隐私协议设置，详见GMPrivacyConfig
                  */
@@ -125,7 +125,7 @@ public class GMAdManagerHolder {
                         return GMAdConstant.ADULT_STATE.AGE_ADULT;
                     }
                 })
-                .setLocalExtra(initConfig)
+//                .setLocalExtra(initConfig)
 //                .setCustomLocalConfig(jsonObject)
                 .build();
     }
