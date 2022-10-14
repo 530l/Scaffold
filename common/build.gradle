@@ -55,7 +55,7 @@ dependencies {
     api 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-ktx:2.1.0'
     api 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-nonreflection-ktx:2.1.0'
     api 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-base:2.1.0'
-    api "cn.therouter:router:1.1.1-rc3"
+    api "cn.therouter:router:1.1.1-rc5"
     api 'com.squareup.okhttp3:okhttp:4.10.0'
     api 'com.github.bumptech.glide:glide:4.13.2'
     api 'com.github.liangjingkanji:Net:3.5.1'
