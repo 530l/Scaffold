@@ -58,4 +58,7 @@
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
+
+
+
 </resources>

@@ -33,8 +33,8 @@ public class InnerProgressBar extends ProgressBar {
     @Override
     protected synchronized void onDraw (Canvas canvas) {
         super.onDraw (canvas);
-        String text = String.valueOf (getProgress ()) + "%";
-        mPaint.getTextBounds (text, 0, text.length (), mRect);
-        canvas.drawText (text, getWidth () / 2, getHeight () / 2 + mRect.height () / 2, mPaint);
+//        String text = String.valueOf (getProgress ()) + "%";
+//        mPaint.getTextBounds (text, 0, text.length (), mRect);
+//        canvas.drawText (text, getWidth () / 2, getHeight () / 2 + mRect.height () / 2, mPaint);
     }
 }
