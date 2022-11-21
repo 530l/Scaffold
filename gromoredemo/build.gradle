@@ -55,4 +55,11 @@ dependencies {
     implementation "com.gromore.cn:pangle-adapter:4.8.0.8.2" //穿山甲 adapter
     implementation(name: 'GDTSDK.unionNormal.4.491.1361', ext: 'aar')//GDT
     implementation(name: 'open_ad_sdk_4.8.0.8', ext: 'aar')//pangle
+
+    // 基础依赖包，必须要依赖
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    // kotlin扩展（可选）
+    implementation 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+    // fragment快速实现（可选）已废弃
+    implementation 'com.geyifeng.immersionbar:immersionbar-components:3.2.2'
 }
